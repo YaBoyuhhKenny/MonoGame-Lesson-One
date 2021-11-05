@@ -10,6 +10,8 @@ namespace MonoGame_Lesson_One
 
         Texture2D dinoTexture;
         Texture2D ghostTexture;
+        Texture2D earthTexture;
+        Texture2D meteorTexture;
 
         public Game1()
         {
@@ -37,6 +39,8 @@ namespace MonoGame_Lesson_One
             // TODO: use this.Content to load your game content here
             dinoTexture = Content.Load<Texture2D>("dino");
             ghostTexture = Content.Load<Texture2D>("ghost");
+            earthTexture = Content.Load<Texture2D>("Earth");
+            meteorTexture = Content.Load<Texture2D>("meteor");
         }
 
         protected override void Update(GameTime gameTime)
@@ -56,10 +60,10 @@ namespace MonoGame_Lesson_One
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
 
-
-            _spriteBatch.Draw(dinoTexture, new Vector2(10, 10), Color.Black);
-            _spriteBatch.Draw(dinoTexture, new Vector2(300, 10), Color.Black);
-            _spriteBatch.Draw(ghostTexture, new Vector2(10, 100), Color.Cyan);
+            _spriteBatch.Draw(earthTexture, new Vector2(0, 0), Color.White);
+            _spriteBatch.Draw(dinoTexture, new Vector2(10, 500), Color.White);
+            _spriteBatch.Draw(dinoTexture, new Vector2(900, 500), Color.White);
+            _spriteBatch.Draw(meteorTexture, new Vector2(600, 20), Color.White);
 
 
             _spriteBatch.End();
